@@ -37,7 +37,7 @@ var question = inquirer.prompt([{
         case "Twitter for Prior Tweets":
             getTweets(userSearch);
             break;
-        case "Search Movies via OMBD":
+        case "Movies via OMBD":
             getMovie(userSearch);
             break;
         case "Song via Spotify":
@@ -99,8 +99,8 @@ function getMovie(userSearch){
         userSearch = "Banking on Bitcoin";
     };
     // make the API call with search term
-    request("http://www.omdbapi.com/?t="+movie+"&y=&plot=short&apikey=trilogy", function(error, response, body) {
-            if (err){
+    request("http://www.omdbapi.com/?t="+userSearch+"&y=&plot=short&apikey=trilogy", function(error, response, body) {
+            if (error){
             console.log("error");
             }
             else{
