@@ -93,12 +93,13 @@ function getSong(song) {
     console.log(song);
 }
 // OMBD Movie call function
-// var getMovie = (movie) => {
+// function getMovie(movie){
 //     if (!movie){
 //         movie = "Banking on Bitcoin";
 //     };
 //     // make the API call with search term
 //     request("http://www.omdbapi.com/?t="+movie+"&y=&plot=short&apikey=trilogy", function(error, response, body) {
+// add console logs to call movie data
 
 // DWIS data function
 function DWIS(random) {
