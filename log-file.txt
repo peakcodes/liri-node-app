@@ -1,0 +1,10 @@
+this is loaded
+? Where would you like to focus your search? (Use arrow keys)
+❯ Twitter for Prior Tweets 
+  Movies via OMBD 
+  Song via Spotify 
+  Do What It Says [18D[18C[2K[1A[2K[1A[2K[1A[2K[1A[2K[G? Where would you like to focus your search? Twitter for Prior Tweets[69D[69C
+? What would you like to search for? [37D[37C[2K[G? What would you like to search for? [37D[37C
+{ userChoice: 'Twitter for Prior Tweets', userSearch: '' }
+
+{ errors: [ { code: 32, message: 'Could not authenticate you.' } ] }

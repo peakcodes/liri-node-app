@@ -91,14 +91,31 @@ function getSong(song) {
 
 
     console.log(song);
+
 }
-// OMBD Movie call function
-// function getMovie(movie){
-//     if (!movie){
-//         movie = "Banking on Bitcoin";
-//     };
-//     // make the API call with search term
-//     request("http://www.omdbapi.com/?t="+movie+"&y=&plot=short&apikey=trilogy", function(error, response, body) {
+// OMBD Movie call function - ISSUES!
+function getMovie(userSearch){
+    if (!userSearch){
+        userSearch = "Banking on Bitcoin";
+    };
+    // make the API call with search term
+    request("http://www.omdbapi.com/?t="+movie+"&y=&plot=short&apikey=trilogy", function(error, response, body) {
+            if (err){
+            console.log("error");
+            }
+            else{
+            console.log('Title: '+JSON.parse(body).Title);
+            console.log('Year Released: '+JSON.parse(body).Year);
+            console.log('IMDB Rating: '+JSON.parse(body).Ratings[0].Value);
+            console.log('Rotten Tomatoes Rating: '+JSON.parse(body).Ratings[1].Value);
+            console.log('Production Location: '+JSON.parse(body).Country);
+            console.log('Movie Language: '+JSON.parse(body).Language);
+            console.log('Synopsis (Caution Spoilers!): '+JSON.parse(body).Plot);
+            console.log('Movie Cast: '+JSON.parse(body).Actors);
+            }
+        });
+    } 
+
 // add console logs to call movie data
 
 // DWIS data function
@@ -115,4 +132,5 @@ function DWIS(random) {
      // log data to txt file
 //    var dataLogs = ()
 }
+
    
