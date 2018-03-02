@@ -20,7 +20,7 @@ var tclient = new Twitter(keys.twitter);
 var question = inquirer.prompt([{
         type: "list",
         name: "userChoice",
-        message: "Where would you like to search?",
+        message: "Where would you like to focus your search?",
         choices: ["Twitter for Prior Tweets", "Movies via OMBD", "Song via Spotify", "Do What It Says"]
     },
     {
@@ -63,7 +63,6 @@ function getTweets(handle) {
 
     client.get('statuses/user_timeline', params, function (error, tweets, response) {
         console.log(tweets);
-        console.log("gt");
         if (!error) {
             console.log(tweets);
         }
@@ -93,11 +92,14 @@ function getSong(song) {
 
     console.log(song);
 }
+// OMBD Movie call function
+// var getMovie = (movie) => {
+//     if (!movie){
+//         movie = "Banking on Bitcoin";
+//     };
+//     // make the API call with search term
+//     request("http://www.omdbapi.com/?t="+movie+"&y=&plot=short&apikey=trilogy", function(error, response, body) {
 
-function getMovie(movie) {
-    console.log(movie);
-
-}
 // DWIS data function
 function DWIS(random) {
     fs.readFile("random.txt", "utf8", function(err, data) {
@@ -109,5 +111,7 @@ function DWIS(random) {
         getSong(dataArray[1]);
     }
     });
-    // console.log(random);
+     // log data to txt file
+//    var dataLogs = ()
 }
+   
