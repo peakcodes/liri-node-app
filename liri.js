@@ -20,8 +20,8 @@ var tclient = new Twitter(keys.twitter);
 var question = inquirer.prompt([{
         type: "list",
         name: "userChoice",
-        message: "What search option would you like to choose?",
-        choices: ["Display Prior Tweets", "Search Movies via OMBD", "Search Spotify for a Song", "Do What is Says"]
+        message: "Where would you like to search?",
+        choices: ["Twitter for Prior Tweets", "Movies via OMBD", "Song via Spotify", "Do What It Says"]
     },
     {
         type: "input",
@@ -32,17 +32,18 @@ var question = inquirer.prompt([{
     var userSelection = user.userChoice;
     var userSearch = user.userSearch;
     console.log(user);
+    // Create swith options for potential searches
     switch (userSelection) {
-        case "Display Prior Tweets":
+        case "Twitter for Prior Tweets":
             getTweets(userSearch);
             break;
         case "Search Movies via OMBD":
             getMovie(userSearch);
             break;
-        case "Search Spotify for a Song":
+        case "Song via Spotify":
             getSong(userSearch);
             break;
-        case "Do What is Says":
+        case "Do What It Says":
             DWIS(userSearch);
             break;
     }
@@ -69,7 +70,7 @@ function getTweets(handle) {
     });
     console.log(handle);
 }
-
+// set up spotify search pull
 function getSong(song) {
 
     var spotify = new Spotify(keys.spotify);
@@ -97,39 +98,16 @@ function getMovie(movie) {
     console.log(movie);
 
 }
-
+// DWIS data function
 function DWIS(random) {
     fs.readFile("random.txt", "utf8", function(err, data) {
     if (err) {
         console.log("Try again loser");
-        console.log(data);
     }
     else{
         var dataArray = data.split(",");
         getSong(dataArray[1]);
     }
     });
-    console.log(random);
+    // console.log(random);
 }
-
-
-
-
-
-// Create swith options for potential searches
-
-// call function to run upon execution of search determination
-
-// set up OMBD movie api and set up search terms
-
-// set up Spotify song search api and set up search terms
-
-// set up twitter tweet pull
-
-//console.log to ensure successful connection to api's
-
-// suggested spotify api call languagej
-// console.log(`Title: ${data.tracks.items[0].name}`);
-// console.log(`Artist: ${data.tracks.items[0].artists[0].name}`);
-// console.log(`Album: ${data.tracks.items[0].album.name}`);
-// console.log(`Preview link: ${data.tracks.items[0].preview_url}`);
