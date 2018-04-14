@@ -1,4 +1,4 @@
-# Liri Node App
+## Liri Node App
 
 This is a node based appilication. 
 
@@ -11,7 +11,7 @@ Those search results will be in Twitter, Spotify, OMDB and a prepicked destinati
 Twitter:
 Based on user this will show your last 20 tweets and when they were created at in your terminal/bash window.
 
-**Spotify Results:
+**Spotify Results:**
 
 *Artist
 *Song Name 
@@ -19,7 +19,7 @@ Based on user this will show your last 20 tweets and when they were created at i
 *Song Preview
 *The song's name
 
-**OMBD Results:
+**OMBD Results:**
 
 *Title of the movie
 *Year the movie came out
