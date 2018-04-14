@@ -11,24 +11,25 @@ Those search results will be in Twitter, Spotify, OMDB and a prepicked destinati
 Twitter:
 Based on user this will show your last 20 tweets and when they were created at in your terminal/bash window.
 
-Spotify Results:
+**Spotify Results:
 
-Artist
-Song Name 
-Ablum
-Song Preview
-The song's name
+*Artist
+*Song Name 
+*Ablum
+*Song Preview
+*The song's name
 
-OMBD Results:
+**OMBD Results:
 
-   Title of the movie.
-   Year the movie came out.
-   IMDB Rating of the movie.
-   Rotten Tomatoes Rating of the movie.
-   Country where the movie was produced.
-   Language of the movie.
-   Plot of the movie.
-   Actors in the movie.
+*Title of the movie
+*Year the movie came out
+*MDB Rating of the movie
+*Rotten Tomatoes Rating of the movie
+*Country where the movie was produced
+*Language of the movie
+*Plot of the movie
+*Actors in the movie
+
 If the user doesn't type a movie in, the program will output data for the movie 'Banking on Bitcoin.'
 
  Do What It Says Results:
